@@ -133,8 +133,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
 
-
-
         if (position == 0) {
             editText1.setText("");
             editText2.setText("");
@@ -564,6 +562,110 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 }
             });
 
+
+
+            Button calculate = findViewById(R.id.calculate);
+            calculate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    TextView textView1 = findViewById(R.id.textView1);
+                    TextView textView2 = findViewById(R.id.textView2);
+                    TextView textView3 = findViewById(R.id.textView3);
+                    TextView textView4 = findViewById(R.id.textView4);
+
+                    String s1 = textView1.getText().toString();
+                    String s2 = textView2.getText().toString();
+                    String s3 = textView3.getText().toString();
+                    String s4 = textView4.getText().toString();
+
+                    if (s1.equals("Calories")) {
+                        int n2 = Integer.parseInt(s2);
+                        int n3 = Integer.parseInt(s3);
+                        int n4 = Integer.parseInt(s4);
+
+                        int res = n2 + n3 + n4;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+                    } else if (s2.equals("Calories")) {
+                        int n1 = Integer.parseInt(s1);
+                        int n3 = Integer.parseInt(s3);
+                        int n4 = Integer.parseInt(s4);
+
+                        int res = n1 + n3 + n4;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+                    } else if (s3.equals("Calories")) {
+                        int n2 = Integer.parseInt(s2);
+                        int n1 = Integer.parseInt(s1);
+                        int n4 = Integer.parseInt(s4);
+
+                        int res = n2 + n1 + n4;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+
+                    } else if (s4.equals("Calories")) {
+                        int n2 = Integer.parseInt(s2);
+                        int n3 = Integer.parseInt(s3);
+                        int n1 = Integer.parseInt(s1);
+
+                        int res = n2 + n3 + n1;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+                    } else if (s1.equals("Calories") && s2.equals("Calories")) {
+                        int n3 = Integer.parseInt(s3);
+                        int n4 = Integer.parseInt(s4);
+
+                        int res = n3 + n4;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+                    } else if (s1.equals("Calories") && s3.equals("Calories")) {
+                        int n2 = Integer.parseInt(s2);
+                        int n4 = Integer.parseInt(s4);
+
+                        int res = n2 + n4;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+                    } else if (s1.equals("Calories") && s4.equals("Calories")) {
+                        int n2 = Integer.parseInt(s2);
+                        int n3 = Integer.parseInt(s3);
+
+                        int res = n2 + n3;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+                    } else if (s2.equals("Calories") && s3.equals("Calories")) {
+                        int n1 = Integer.parseInt(s1);
+                        int n4 = Integer.parseInt(s4);
+
+                        int res = n1 + n4;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+                    } else if (s2.equals("Calories") && s4.equals("Calories")) {
+                        int n1 = Integer.parseInt(s1);
+                        int n3 = Integer.parseInt(s3);
+
+                        int res = n1 + n3;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+                    } else if (s3.equals("Calories") && s4.equals("Calories")) {
+                        int n1 = Integer.parseInt(s1);
+                        int n2 = Integer.parseInt(s2);
+
+                        int res = n1 + n2;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+                    } 
+                }
+            });
         } else if (position == 1) {
             editText1.setText("");
             editText2.setText("");
