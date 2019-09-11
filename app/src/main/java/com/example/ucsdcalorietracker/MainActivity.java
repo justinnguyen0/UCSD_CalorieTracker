@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             "Potato Spinach & Mushroom Vegetarian Lasagna", "Salmon w/Tomato and Fennel",
             "Au Gratin Potatoes with Green Chile", "Steamed Vegetable Mix", "Wild Rice Pilaf",
             "Rice Noodles", "Udon Noodles", "Yakisoba Noodle", "Char Siu Pork", "Chicken Thigh",
-            "Tofu Cubes"
+            "Tofu Cubes", "Pot Roast", "Parslied Carrots and Cauliflower", "Roasted Red Potatoes",
 
     };
 
@@ -2595,6 +2595,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     } else if (str.equals("Sweet Soy Ginger sauce")) {
                         TextView textView1 = findViewById(R.id.textView1);
                         textView1.setText("58");
+                    } else if (str.equals("Pot Roast")) {
+                        TextView textView1 = findViewById(R.id.textView1);
+                        textView1.setText("170");
+                    } else if (str.equals("Parslied Carrots and Cauliflower")) {
+                        TextView textView1 = findViewById(R.id.textView1);
+                        textView1.setText("39");
+                    } else if (str.equals("Roasted Red Potatoes")) {
+                        TextView textView1 = findViewById(R.id.textView1);
+                        textView1.setText("142");
                     }
                 }
             });
@@ -2916,6 +2925,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     } else if (str.equals("Sweet Soy Ginger sauce")) {
                         TextView textView2 = findViewById(R.id.textView2);
                         textView2.setText("58");
+                    } else if (str.equals("Pot Roast")) {
+                        TextView textView2 = findViewById(R.id.textView2);
+                        textView2.setText("170");
+                    } else if (str.equals("Parslied Carrots and Cauliflower")) {
+                        TextView textView2 = findViewById(R.id.textView2);
+                        textView2.setText("39");
+                    } else if (str.equals("Roasted Red Potatoes")) {
+                        TextView textView2 = findViewById(R.id.textView2);
+                        textView2.setText("142");
                     }
                 }
             });
@@ -3237,6 +3255,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     } else if (str.equals("Sweet Soy Ginger sauce")) {
                         TextView textView3 = findViewById(R.id.textView3);
                         textView3.setText("58");
+                    } else if (str.equals("Pot Roast")) {
+                        TextView textView3 = findViewById(R.id.textView3);
+                        textView3.setText("170");
+                    } else if (str.equals("Parslied Carrots and Cauliflower")) {
+                        TextView textView3 = findViewById(R.id.textView3);
+                        textView3.setText("39");
+                    } else if (str.equals("Roasted Red Potatoes")) {
+                        TextView textView3 = findViewById(R.id.textView3);
+                        textView3.setText("142");
                     }
                 }
             });
@@ -3558,6 +3585,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     } else if (str.equals("Sweet Soy Ginger sauce")) {
                         TextView textView4 = findViewById(R.id.textView4);
                         textView4.setText("58");
+                    } else if (str.equals("Pot Roast")) {
+                        TextView textView4 = findViewById(R.id.textView4);
+                        textView4.setText("170");
+                    } else if (str.equals("Parslied Carrots and Cauliflower")) {
+                        TextView textView4 = findViewById(R.id.textView4);
+                        textView4.setText("39");
+                    } else if (str.equals("Roasted Red Potatoes")) {
+                        TextView textView4 = findViewById(R.id.textView4);
+                        textView4.setText("142");
                     }
                 }
             });
