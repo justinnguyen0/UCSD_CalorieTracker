@@ -588,6 +588,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     TextView textView3 = findViewById(R.id.textView3);
                     TextView textView4 = findViewById(R.id.textView4);
 
+
                     String s1 =  textView1.getText().toString();
                     String s2 =  textView2.getText().toString();
                     String s3 =  textView3.getText().toString();
@@ -664,14 +665,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         TextView total = findViewById(R.id.total);
                         total.setText(String.valueOf(res));
                     } else if (s1.equals("Calories") && s2.equals("Calories")) {
+                        int n3 = Integer.parseInt(s3);
+                        int n4 = Integer.parseInt(s4);
 
-                            int n3 = Integer.parseInt(s3);
-                            int n4 = Integer.parseInt(s4);
+                        int res = n3 + n4;
 
-                            int res = n3 + n4;
-
-                            TextView total = findViewById(R.id.total);
-                            total.setText(String.valueOf(res));
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
                     } else if (s1.equals("Calories")) {
                         int n2 = Integer.parseInt(s2);
                         int n3 = Integer.parseInt(s3);
@@ -722,6 +722,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     }
                 }
             });
+
+
         } else if (position == 1) {
             editText1.setText("");
             editText2.setText("");
