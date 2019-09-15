@@ -16,13 +16,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private static final String[] DEGREES = new String[]{
             //breakfast
-            "Banana Pancakes", "Veggie Egg Scramble Skillet", "Breakfast Hash Plate",
-            "Cage Free Scrambled Eggs", "Mini Biscuit", "Scrambled Egg Whites", "Smoked Bacon",
-            "Soyrizo Scrambled Eggs", "Tater Barrels", "Turkey Sausage", "Veggie Sausage", "Beans",
-            "Fresh Tortillas", "Jalapenos", "Molcajete Green Salsa", "Molcajete Salsa",
-            "Cereal with Milk", "Cut Fresh Fruit", "Whole Apple", "Whole Banana", "Whole Orange",
-            "Yogurt & Fruit Parfait", "Yogurt Bar", "Steelcut Oatmeal", "Assorted Breakfast Toast",
-            "Gluten Friendly Bread", "Country Potatoes",
+            "Cage Free Scrambled Eggs", "Soyrizo Scrambled Eggs", "Turkey Sausage",
+            "Veggie Sausage", "Beans", "Steelcut Oatmeal", "Country Potatoes",
             //lunch
             "Crispy French Fries", "Crispy Onion Rings", "Fried Chicken Fritters",
             "Sweet Potato Fries", "Cheese Pizza", "Cheeseburger", "Gardein Burger",
@@ -32,6 +27,19 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             "Turkey & Swiss Super Sub", "Beef and Broccoli", "Crunchy Orange Chicken",
             "Hibachi Chicken", "Tofu with Black Bean & Garlic Sauce", "Steamed Brown Rice",
             "Steamed Rice", "Stir Fry Veg Mix"
+    };
+
+    private static final String[] OCEANVIEW = new String[]{
+            //breakfast
+            "Bagel Bar with Smoked Salmon", "Acai Bowl", "Lemon Caper Cream Cheese",
+            "Nutella Gone Bananas Spread", "Pomegranate Berry Spread",
+            "Sundried Tomato & Spinach Spread", "Sweet Chipotle Spread", "Apple Kale Smoothie",
+            "Pomegranate Blueberry Smoothie", "Strawberry Mango Smoothie", "Challah French Toast",
+            "Salmon Red Flannel Hash & Eggs", "Cage Free Scrambled Eggs",
+            "Dairy Free Yogurt Parfait Bowl", "Kosher Beef Breakfast Sausage",
+            "Spice Breakfast Potatoes", "Steelcut Oatmeal",
+            //lunch
+
     };
 
     private static final String[] VENTANAS = new String[]{
@@ -740,6 +748,408 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             textView4.setText("Calories");
             TextView total = findViewById(R.id.total);
             total.setText("Total");
+
+            ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this,
+                    android.R.layout.simple_list_item_1, OCEANVIEW);
+            editText1.setAdapter(adapter2);
+
+            editText2.setAdapter(adapter2);
+
+            editText3.setAdapter(adapter2);
+
+            editText4.setAdapter(adapter2);
+
+            editText1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    AutoCompleteTextView editText1 = findViewById(R.id.editText1);
+                    String str = editText1.getText().toString();
+                    //breakfast
+                    if (str.equals("Bagel Bar with Smoked Salmon")) {
+                        TextView textView1 = findViewById(R.id.textView1);
+                        textView1.setText("688");
+                    } else if (str.equals("Acai Bowl")) {
+                        TextView textView1 = findViewById(R.id.textView1);
+                        textView1.setText("413");
+                    } else if (str.equals("Lemon Caper Cream Cheese")) {
+                        TextView textView1 = findViewById(R.id.textView1);
+                        textView1.setText("155");
+                    } else if (str.equals("Nutella Gone Bananas Spread")) {
+                        TextView textView1 = findViewById(R.id.textView1);
+                        textView1.setText("185");
+                    } else if (str.equals("Pomegranate Berry Spread")) {
+                        TextView textView1 = findViewById(R.id.textView1);
+                        textView1.setText("132");
+                    } else if (str.equals("Sundried Tomato & Spinach Spread")) {
+                        TextView textView1 = findViewById(R.id.textView1);
+                        textView1.setText("166");
+                    } else if (str.equals("Sweet Chipotle Spread")) {
+                        TextView textView1 = findViewById(R.id.textView1);
+                        textView1.setText("170");
+                    } else if (str.equals("Apple Kale Smoothie")) {
+                        TextView textView1 = findViewById(R.id.textView1);
+                        textView1.setText("343");
+                    } else if (str.equals("Pomegranate Blueberry Smoothie")) {
+                        TextView textView1 = findViewById(R.id.textView1);
+                        textView1.setText("275");
+                    } else if (str.equals("Strawberry Mango Smoothie")) {
+                        TextView textView1 = findViewById(R.id.textView1);
+                        textView1.setText("340");
+                    } else if (str.equals("Challah French Toast")) {
+                        TextView textView1 = findViewById(R.id.textView1);
+                        textView1.setText("1001");
+                    } else if (str.equals("Salmon Red Flannel Hash & Eggs")) {
+                        TextView textView1 = findViewById(R.id.textView1);
+                        textView1.setText("667");
+                    } else if (str.equals("Cage Free Scrambled Eggs")) {
+                        TextView textView1 = findViewById(R.id.textView1);
+                        textView1.setText("146");
+                    } else if (str.equals("Dairy Free Yogurt Parfait Bowl")) {
+                        TextView textView1 = findViewById(R.id.textView1);
+                        textView1.setText("426");
+                    } else if (str.equals("Kosher Beef Breakfast Sausage")) {
+                        TextView textView1 = findViewById(R.id.textView1);
+                        textView1.setText("208");
+                    } else if (str.equals("Spice Breakfast Potatoes")) {
+                        TextView textView1 = findViewById(R.id.textView1);
+                        textView1.setText("131");
+                    } else if (str.equals("Steelcut Oatmeal")) {
+                        TextView textView1 = findViewById(R.id.textView1);
+                        textView1.setText("461");
+                    //lunch
+                    }
+                }
+            });
+
+            editText2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    AutoCompleteTextView editText2 = findViewById(R.id.editText2);
+                    String str = editText2.getText().toString();
+                    //breakfast
+                    if (str.equals("Bagel Bar with Smoked Salmon")) {
+                        TextView textView2 = findViewById(R.id.textView2);
+                        textView2.setText("688");
+                    } else if (str.equals("Acai Bowl")) {
+                        TextView textView2 = findViewById(R.id.textView2);
+                        textView2.setText("413");
+                    } else if (str.equals("Lemon Caper Cream Cheese")) {
+                        TextView textView2 = findViewById(R.id.textView2);
+                        textView2.setText("155");
+                    } else if (str.equals("Nutella Gone Bananas Spread")) {
+                        TextView textView2 = findViewById(R.id.textView2);
+                        textView2.setText("185");
+                    } else if (str.equals("Pomegranate Berry Spread")) {
+                        TextView textView2 = findViewById(R.id.textView2);
+                        textView2.setText("132");
+                    } else if (str.equals("Sundried Tomato & Spinach Spread")) {
+                        TextView textView2 = findViewById(R.id.textView2);
+                        textView2.setText("166");
+                    } else if (str.equals("Sweet Chipotle Spread")) {
+                        TextView textView2 = findViewById(R.id.textView2);
+                        textView2.setText("170");
+                    } else if (str.equals("Apple Kale Smoothie")) {
+                        TextView textView2 = findViewById(R.id.textView2);
+                        textView2.setText("343");
+                    } else if (str.equals("Pomegranate Blueberry Smoothie")) {
+                        TextView textView2 = findViewById(R.id.textView2);
+                        textView2.setText("275");
+                    } else if (str.equals("Strawberry Mango Smoothie")) {
+                        TextView textView2 = findViewById(R.id.textView2);
+                        textView2.setText("340");
+                    } else if (str.equals("Challah French Toast")) {
+                        TextView textView2 = findViewById(R.id.textView2);
+                        textView2.setText("1001");
+                    } else if (str.equals("Salmon Red Flannel Hash & Eggs")) {
+                        TextView textView2 = findViewById(R.id.textView2);
+                        textView2.setText("667");
+                    } else if (str.equals("Cage Free Scrambled Eggs")) {
+                        TextView textView2 = findViewById(R.id.textView2);
+                        textView2.setText("146");
+                    } else if (str.equals("Dairy Free Yogurt Parfait Bowl")) {
+                        TextView textView2 = findViewById(R.id.textView2);
+                        textView2.setText("426");
+                    } else if (str.equals("Kosher Beef Breakfast Sausage")) {
+                        TextView textView2 = findViewById(R.id.textView2);
+                        textView2.setText("208");
+                    } else if (str.equals("Spice Breakfast Potatoes")) {
+                        TextView textView2 = findViewById(R.id.textView2);
+                        textView2.setText("131");
+                    } else if (str.equals("Steelcut Oatmeal")) {
+                        TextView textView2 = findViewById(R.id.textView2);
+                        textView2.setText("461");
+                        //lunch
+                    }
+                }
+            });
+
+            editText3.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    AutoCompleteTextView editText3 = findViewById(R.id.editText3);
+                    String str = editText3.getText().toString();
+                    //breakfast
+                    if (str.equals("Bagel Bar with Smoked Salmon")) {
+                        TextView textView3 = findViewById(R.id.textView3);
+                        textView3.setText("688");
+                    } else if (str.equals("Acai Bowl")) {
+                        TextView textView3 = findViewById(R.id.textView3);
+                        textView3.setText("413");
+                    } else if (str.equals("Lemon Caper Cream Cheese")) {
+                        TextView textView3 = findViewById(R.id.textView3);
+                        textView3.setText("155");
+                    } else if (str.equals("Nutella Gone Bananas Spread")) {
+                        TextView textView3 = findViewById(R.id.textView3);
+                        textView3.setText("185");
+                    } else if (str.equals("Pomegranate Berry Spread")) {
+                        TextView textView3 = findViewById(R.id.textView3);
+                        textView3.setText("132");
+                    } else if (str.equals("Sundried Tomato & Spinach Spread")) {
+                        TextView textView3 = findViewById(R.id.textView3);
+                        textView3.setText("166");
+                    } else if (str.equals("Sweet Chipotle Spread")) {
+                        TextView textView3 = findViewById(R.id.textView3);
+                        textView3.setText("170");
+                    } else if (str.equals("Apple Kale Smoothie")) {
+                        TextView textView3 = findViewById(R.id.textView3);
+                        textView3.setText("343");
+                    } else if (str.equals("Pomegranate Blueberry Smoothie")) {
+                        TextView textView3 = findViewById(R.id.textView3);
+                        textView3.setText("275");
+                    } else if (str.equals("Strawberry Mango Smoothie")) {
+                        TextView textView3 = findViewById(R.id.textView3);
+                        textView3.setText("340");
+                    } else if (str.equals("Challah French Toast")) {
+                        TextView textView3 = findViewById(R.id.textView3);
+                        textView3.setText("1001");
+                    } else if (str.equals("Salmon Red Flannel Hash & Eggs")) {
+                        TextView textView3 = findViewById(R.id.textView3);
+                        textView3.setText("667");
+                    } else if (str.equals("Cage Free Scrambled Eggs")) {
+                        TextView textView3 = findViewById(R.id.textView3);
+                        textView3.setText("146");
+                    } else if (str.equals("Dairy Free Yogurt Parfait Bowl")) {
+                        TextView textView3 = findViewById(R.id.textView3);
+                        textView3.setText("426");
+                    } else if (str.equals("Kosher Beef Breakfast Sausage")) {
+                        TextView textView3 = findViewById(R.id.textView3);
+                        textView3.setText("208");
+                    } else if (str.equals("Spice Breakfast Potatoes")) {
+                        TextView textView3 = findViewById(R.id.textView3);
+                        textView3.setText("131");
+                    } else if (str.equals("Steelcut Oatmeal")) {
+                        TextView textView3 = findViewById(R.id.textView3);
+                        textView3.setText("461");
+                        //lunch
+                    }
+                }
+            });
+
+            editText4.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    AutoCompleteTextView editText4 = findViewById(R.id.editText4);
+                    String str = editText4.getText().toString();
+                    //breakfast
+                    if (str.equals("Bagel Bar with Smoked Salmon")) {
+                        TextView textView4 = findViewById(R.id.textView4);
+                        textView4.setText("688");
+                    } else if (str.equals("Acai Bowl")) {
+                        TextView textView4 = findViewById(R.id.textView4);
+                        textView4.setText("413");
+                    } else if (str.equals("Lemon Caper Cream Cheese")) {
+                        TextView textView4 = findViewById(R.id.textView4);
+                        textView4.setText("155");
+                    } else if (str.equals("Nutella Gone Bananas Spread")) {
+                        TextView textView4 = findViewById(R.id.textView4);
+                        textView4.setText("185");
+                    } else if (str.equals("Pomegranate Berry Spread")) {
+                        TextView textView4 = findViewById(R.id.textView4);
+                        textView4.setText("132");
+                    } else if (str.equals("Sundried Tomato & Spinach Spread")) {
+                        TextView textView4 = findViewById(R.id.textView4);
+                        textView4.setText("166");
+                    } else if (str.equals("Sweet Chipotle Spread")) {
+                        TextView textView4 = findViewById(R.id.textView4);
+                        textView4.setText("170");
+                    } else if (str.equals("Apple Kale Smoothie")) {
+                        TextView textView4 = findViewById(R.id.textView4);
+                        textView4.setText("343");
+                    } else if (str.equals("Pomegranate Blueberry Smoothie")) {
+                        TextView textView4 = findViewById(R.id.textView4);
+                        textView4.setText("275");
+                    } else if (str.equals("Strawberry Mango Smoothie")) {
+                        TextView textView4 = findViewById(R.id.textView4);
+                        textView4.setText("340");
+                    } else if (str.equals("Challah French Toast")) {
+                        TextView textView4 = findViewById(R.id.textView4);
+                        textView4.setText("1001");
+                    } else if (str.equals("Salmon Red Flannel Hash & Eggs")) {
+                        TextView textView4 = findViewById(R.id.textView4);
+                        textView4.setText("667");
+                    } else if (str.equals("Cage Free Scrambled Eggs")) {
+                        TextView textView4 = findViewById(R.id.textView4);
+                        textView4.setText("146");
+                    } else if (str.equals("Dairy Free Yogurt Parfait Bowl")) {
+                        TextView textView4 = findViewById(R.id.textView4);
+                        textView4.setText("426");
+                    } else if (str.equals("Kosher Beef Breakfast Sausage")) {
+                        TextView textView4 = findViewById(R.id.textView4);
+                        textView4.setText("208");
+                    } else if (str.equals("Spice Breakfast Potatoes")) {
+                        TextView textView4 = findViewById(R.id.textView4);
+                        textView4.setText("131");
+                    } else if (str.equals("Steelcut Oatmeal")) {
+                        TextView textView4 = findViewById(R.id.textView4);
+                        textView4.setText("461");
+                        //lunch
+                    }
+                }
+            });
+
+            Button calculate = findViewById(R.id.calculate);
+            calculate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    TextView textView1 = findViewById(R.id.textView1);
+                    TextView textView2 = findViewById(R.id.textView2);
+                    TextView textView3 = findViewById(R.id.textView3);
+                    TextView textView4 = findViewById(R.id.textView4);
+
+
+                    String s1 =  textView1.getText().toString();
+                    String s2 =  textView2.getText().toString();
+                    String s3 =  textView3.getText().toString();
+                    String s4 =  textView4.getText().toString();
+
+                    if (s1.equals("Calories") && s2.equals("Calories")
+                            && s3.equals("Calories") && s4.equals("Calories")) {
+                        int n1 = 0;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(n1));
+                    } else if (s2.equals("Calories") && s3.equals("Calories")
+                            && s4.equals("Calories")) {
+                        int n1 = Integer.parseInt(s1);
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(n1));
+                    } else if (s1.equals("Calories") && s3.equals("Calories")
+                            && s4.equals("Calories")) {
+                        int n2 = Integer.parseInt(s2);
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(n2));
+                    } else if (s1.equals("Calories") && s2.equals("Calories")
+                            && s4.equals("Calories")) {
+                        int n3 = Integer.parseInt(s3);
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(n3));
+                    } else if (s1.equals("Calories") && s2.equals("Calories") &&
+                            s3.equals("Calories")) {
+                        int n4 = Integer.parseInt(s4);
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(n4));
+                    } else if (s3.equals("Calories") && s4.equals("Calories")) {
+                        int n1 = Integer.parseInt(s1);
+                        int n2 = Integer.parseInt(s2);
+
+                        int res = n1 + n2;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+                    } else if (s2.equals("Calories") && s4.equals("Calories")) {
+                        int n1 = Integer.parseInt(s1);
+                        int n3 = Integer.parseInt(s3);
+
+                        int res = n1 + n3;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+                    } else if (s2.equals("Calories") && s3.equals("Calories")) {
+                        int n1 = Integer.parseInt(s1);
+                        int n4 = Integer.parseInt(s4);
+
+                        int res = n1 + n4;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+                    } else if (s1.equals("Calories") && s4.equals("Calories")) {
+                        int n2 = Integer.parseInt(s2);
+                        int n3 = Integer.parseInt(s3);
+
+                        int res = n2 + n3;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+                    } else if (s1.equals("Calories") && s3.equals("Calories")) {
+                        int n2 = Integer.parseInt(s2);
+                        int n4 = Integer.parseInt(s4);
+
+                        int res = n2 + n4;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+                    } else if (s1.equals("Calories") && s2.equals("Calories")) {
+                        int n3 = Integer.parseInt(s3);
+                        int n4 = Integer.parseInt(s4);
+
+                        int res = n3 + n4;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+                    } else if (s1.equals("Calories")) {
+                        int n2 = Integer.parseInt(s2);
+                        int n3 = Integer.parseInt(s3);
+                        int n4 = Integer.parseInt(s4);
+
+                        int res = n2 + n3 + n4;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+                    } else if (s2.equals("Calories")) {
+                        int n1 = Integer.parseInt(s1);
+                        int n3 = Integer.parseInt(s3);
+                        int n4 = Integer.parseInt(s4);
+
+                        int res = n1 + n3 + n4;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+                    } else if (s3.equals("Calories")) {
+                        int n2 = Integer.parseInt(s2);
+                        int n1 = Integer.parseInt(s1);
+                        int n4 = Integer.parseInt(s4);
+
+                        int res = n2 + n1 + n4;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+
+                    } else if (s4.equals("Calories")) {
+                        int n2 = Integer.parseInt(s2);
+                        int n3 = Integer.parseInt(s3);
+                        int n1 = Integer.parseInt(s1);
+
+                        int res = n2 + n3 + n1;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+                    } else {
+                        int n1= Integer.parseInt(s1);
+                        int n2 = Integer.parseInt(s2);
+                        int n3 = Integer.parseInt(s3);
+                        int n4 = Integer.parseInt(s4);
+
+                        int res = n1 + n2 + n3 + n4;
+
+                        TextView total = findViewById(R.id.total);
+                        total.setText(String.valueOf(res));
+                    }
+                }
+            });
 
         } else if (position == 2){
             editText1.setText("");
